@@ -11,7 +11,7 @@ const Post = ({ post }) => {
   const dispatch = useDispatch();
 
   const handleEdit = (e) => {
-    e.preventdefaul();
+    e.preventDefault();
 
     const postData = {
       title: post.title,
@@ -46,9 +46,9 @@ const Post = ({ post }) => {
         <form onSubmit={(e) => handleEdit(e)}>
           <textarea
             defaultValue={post.content}
-            onChange={(e) => setEditContent(e.targuet.value)}
+            onChange={(e) => setEditContent(e.target.value)}
           ></textarea>
-          <input type=" submit" value="valider modification" />
+          <input type="submit" value="valider modification" />
         </form>
       ) : (
         <p>{post.content}</p>

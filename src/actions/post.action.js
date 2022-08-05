@@ -22,7 +22,7 @@ export const addPost = (data) => {
   return (dispatch) => {
     return axios
       .post(`http://localhost:3000/posts`, data)
-      .then(() => {
+      .then((res) => {
         dispatch({ type: ADD_POST, payload: data });
       })
       .catch((err) => console.log(err));
