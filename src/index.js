@@ -6,6 +6,7 @@ import App from "./App";
 import "./styles/index.scss";
 import rootReducer from "./reducers";
 import { getPosts } from "./actions/post.action";
+import { getUser } from "./actions/user.action";
 
 //redux
 const store = configureStore({
@@ -14,6 +15,7 @@ const store = configureStore({
 });
 
 store.dispatch(getPosts());
+store.dispatch(getUser());
 
 ReactDOM.render(
   <Provider store={store}>
